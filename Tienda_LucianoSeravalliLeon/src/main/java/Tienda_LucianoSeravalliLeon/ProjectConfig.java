@@ -1,5 +1,5 @@
 
-package Tienda_LucianoSeravalliLeon.demo;
+package Tienda_LucianoSeravalliLeon;
 
 import java.util.Locale;
 import org.springframework.context.MessageSource;
