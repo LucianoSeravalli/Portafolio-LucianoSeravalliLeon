@@ -1,4 +1,5 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -42,6 +43,8 @@ public class Categoria implements Serializable {
     private Boolean activo;
 }
 =======
+=======
+>>>>>>> Stashed changes
 /*    package Tienda_LucianoSeravalliLeon.domain;
     import jakarta.
     import jakarta.persistence.Entity;
@@ -80,4 +83,7 @@ public class Categoria implements Serializable {
         private Boolean activo;
     }
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes

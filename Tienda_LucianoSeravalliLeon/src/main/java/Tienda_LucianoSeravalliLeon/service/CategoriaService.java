@@ -2,9 +2,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  */
 package Tienda_LucianoSeravalliLeon.service;
 
+=======
+ *
+package Tienda_LucianoSeravalliLeon.service;
+>>>>>>> Stashed changes
 =======
  *
 package Tienda_LucianoSeravalliLeon.service;
@@ -16,6 +21,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 import java.io.IOException;
 import java.util.Optional;
 
@@ -23,11 +29,17 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.dao.DataIntegrityViolationException;
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 
 @Service
 public class CategoriaService {
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+    // Permite crear una única instancia de CategoriaRepository, y la crea automáticamente
+>>>>>>> Stashed changes
 =======
     // Permite crear una única instancia de CategoriaRepository, y la crea automáticamente
 >>>>>>> Stashed changes
@@ -37,7 +49,11 @@ public class CategoriaService {
     @Transactional(readOnly = true)
     public List<Categoria> getCategorias(boolean activo) {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         if (activo) {
+=======
+        if (activo) { // Solo activos...
+>>>>>>> Stashed changes
 =======
         if (activo) { // Solo activos...
 >>>>>>> Stashed changes
@@ -45,6 +61,7 @@ public class CategoriaService {
         }
         return categoriaRepository.findAll();
     }
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 
     @Transactional(readOnly = true)
@@ -85,6 +102,9 @@ public class CategoriaService {
         }
     }
 }
+=======
+}
+>>>>>>> Stashed changes
 =======
 }
 >>>>>>> Stashed changes
