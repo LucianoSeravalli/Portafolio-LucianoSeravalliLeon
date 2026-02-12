@@ -1,34 +1,51 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+<<<<<<< Updated upstream
  */
 package Tienda_LucianoSeravalliLeon.service;
 
+=======
+ *
+package Tienda_LucianoSeravalliLeon.service;
+>>>>>>> Stashed changes
 import Tienda_LucianoSeravalliLeon.domain.Categoria;
 import Tienda_LucianoSeravalliLeon.repository.CategoriaRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+<<<<<<< Updated upstream
 import java.io.IOException;
 import java.util.Optional;
 
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.dao.DataIntegrityViolationException;
+=======
+>>>>>>> Stashed changes
 
 @Service
 public class CategoriaService {
 
+<<<<<<< Updated upstream
+=======
+    // Permite crear una única instancia de CategoriaRepository, y la crea automáticamente
+>>>>>>> Stashed changes
     @Autowired
     private CategoriaRepository categoriaRepository;
 
     @Transactional(readOnly = true)
     public List<Categoria> getCategorias(boolean activo) {
+<<<<<<< Updated upstream
         if (activo) {
+=======
+        if (activo) { // Solo activos...
+>>>>>>> Stashed changes
             return categoriaRepository.findByActivoTrue();
         }
         return categoriaRepository.findAll();
     }
+<<<<<<< Updated upstream
 
     @Transactional(readOnly = true)
     public Optional<Categoria> getCategoria(Integer idCategoria) {
@@ -68,3 +85,6 @@ public class CategoriaService {
         }
     }
 }
+=======
+}
+>>>>>>> Stashed changes

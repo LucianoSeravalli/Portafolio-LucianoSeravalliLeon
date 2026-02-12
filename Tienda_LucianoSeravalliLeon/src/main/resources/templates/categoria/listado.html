@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+<<<<<<< Updated upstream
     <head th:replace="~{general/fragmentos :: head}">
         <title>TechShop</title>
     </head>
@@ -18,3 +19,20 @@
 
     </body>
 </html>
+=======
+
+<head th:replace="~{general/fragmentos :: head}">
+    <title>TechShop</title>
+</head>
+
+<body>
+    <header th:replace="~{general/fragmentos :: header}"></header>
+
+    <section th:replace="~{categoria/fragmentos :: agregar}"></section>
+    <section th:replace="~{categoria/fragmentos :: listado}"></section>
+
+    <footer th:replace="~{general/fragmentos :: footer}"></footer>
+</body>
+</html>
+
+>>>>>>> Stashed changes
