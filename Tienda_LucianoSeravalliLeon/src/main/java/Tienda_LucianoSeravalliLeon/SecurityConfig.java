@@ -28,34 +28,34 @@ public class SecurityConfig {
         "/producto/**", "/categoria/**", "/usuario/**"
     };
    
-    @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http.authorizeHttpRequests(request -> request
-                .requestMatchers(PUBLIC_URLS).permitAll()
-                .requestMatchers(USUARIO_URLS).hasRole("USUARIO")
-                .requestMatchers(ADMIN_OR_VENDEDOR_URLS).hasAnyRole("ADMIN", "VENDEDOR")
-                .requestMatchers(ADMIN_URLS).hasRole("ADMIN")
-                .anyRequest().authenticated()
-        ).formLogin(form -> form // Configuración de formulario de login
-                .loginPage("/login")
-                .loginProcessingUrl("/login")
-                .defaultSuccessUrl("/", true)
-                .failureUrl("/login?error=true")
-                .permitAll()
-        ).logout(logout -> logout // Configuración de logout
-                .logoutUrl("/logout")
-                .logoutSuccessUrl("/login?logout=true")
-                .invalidateHttpSession(true)
-                .deleteCookies("JSESSIONID")
-                .permitAll()
-        ).exceptionHandling(exceptions -> exceptions // Manejo de excepciones
-                .accessDeniedPage("/acceso_denegado")
-        ).sessionManagement(session -> session // Configuración de sesiones
-                .maximumSessions(1)
-                .maxSessionsPreventsLogin(false)
-        );
-        return http.build();
-    }
+//    @Bean
+//    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+//        http.authorizeHttpRequests(request -> request
+//                .requestMatchers(PUBLIC_URLS).permitAll()
+//                .requestMatchers(USUARIO_URLS).hasRole("USUARIO")
+//                .requestMatchers(ADMIN_OR_VENDEDOR_URLS).hasAnyRole("ADMIN", "VENDEDOR")
+//                .requestMatchers(ADMIN_URLS).hasRole("ADMIN")
+//                .anyRequest().authenticated()
+//        ).formLogin(form -> form // Configuración de formulario de login
+//                .loginPage("/login")
+//                .loginProcessingUrl("/login")
+//                .defaultSuccessUrl("/", true)
+//                .failureUrl("/login?error=true")
+//                .permitAll()
+//        ).logout(logout -> logout // Configuración de logout
+//                .logoutUrl("/logout")
+//                .logoutSuccessUrl("/login?logout=true")
+//                .invalidateHttpSession(true)
+//                .deleteCookies("JSESSIONID")
+//                .permitAll()
+//        ).exceptionHandling(exceptions -> exceptions // Manejo de excepciones
+//                .accessDeniedPage("/acceso_denegado")
+//        ).sessionManagement(session -> session // Configuración de sesiones
+//                .maximumSessions(1)
+//                .maxSessionsPreventsLogin(false)
+//        );
+//        return http.build();
+//    }
 
      @Bean
     public PasswordEncoder passwordEncoder() {
