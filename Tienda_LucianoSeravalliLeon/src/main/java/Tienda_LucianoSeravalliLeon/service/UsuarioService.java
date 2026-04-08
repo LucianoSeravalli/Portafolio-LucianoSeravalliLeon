@@ -5,6 +5,7 @@ import Tienda_LucianoSeravalliLeon.domain.Usuario;
 import Tienda_LucianoSeravalliLeon.repository.RolRepository;
 import Tienda_LucianoSeravalliLeon.repository.UsuarioRepository;
 import java.io.IOException;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -144,13 +145,21 @@ public class UsuarioService {
         if (usuarioOpt.isEmpty()) {
             throw new RuntimeException("Usuario no encontrado: " + username);
         }
+
         Usuario usuario = usuarioOpt.get();
+
+        if (usuario.getRoles() == null) {
+            usuario.setRoles(new HashSet<>());
+        }
+
         Optional<Rol> rolOpt = rolRepository.findByRol(rolStr);
         if (rolOpt.isEmpty()) {
             throw new RuntimeException("Rol no encontrado.");
         }
+
         Rol rol = rolOpt.get();
         usuario.getRoles().add(rol);
+
         return usuarioRepository.save(usuario);
     }
 }
