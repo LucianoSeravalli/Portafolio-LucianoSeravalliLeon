@@ -97,7 +97,10 @@
                         <ul class="navbar-nav" sec:authorize="!isAuthenticated()">
                             <li class="nav-item">
                                 <a class="nav-link" th:href="@{/login}">
-                                    <i class="fas fa-sign-in-alt"></i>
+                                    <img th:src="@{${session.imagenUsuario}}"
+                                         alt="your image"
+                                         height="40"
+                                         class="rounded-circle"/>
                                     <span class="ms-1">Login</span>
                                 </a>
                             </li>
